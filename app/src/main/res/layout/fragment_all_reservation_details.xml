@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="user3"
+            type="com.example.cruisemaster.reservationno.model.User3" />
+    </data>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:text="@{user3.isCheckedIn()}"
+            android:id="@+id/txt1"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:padding="25dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TextView
+            android:text="@{user3.isOnboard()}"
+            android:id="@+id/txt2"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- <TextView
+             android:text="@{user.login}"
+             android:id="@+id/txt3"
+             android:textSize="16sp"
+             android:padding="5dp"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+         <TextView
+             android:text="@{user.html_url}"
+             android:id="@+id/txt4"
+             android:textSize="16sp"
+             android:textStyle="bold"
+             android:padding="5dp"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+         <TextView
+             android:text="@{user.following_url}"
+             android:id="@+id/txt5"
+             android:textSize="16sp"
+             android:padding="5dp"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+
+         <TextView
+             android:text="@{user.url}"
+             android:id="@+id/txt6"
+             android:textSize="16sp"
+             android:padding="5dp"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+
+
+         <TextView
+             android:text="@{user.avatar_url}"
+             android:id="@+id/txt7"
+             android:textSize="16sp"
+             android:padding="5dp"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />
+
+
+         <TextView
+             android:text="@{user.login}"
+             android:id="@+id/txt8"
+             android:textSize="16sp"
+             android:padding="5dp"
+             android:textStyle="bold"
+             android:layout_margin="5dp"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content" />-->
+
+
+    </LinearLayout>
+</layout>

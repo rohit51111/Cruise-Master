@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="details"
+            type="com.example.cruisemaster.guestdetails.model.User4" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/background"
+        android:padding="16dp">
+
+        <!-- Title Section -->
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:text="Reservation Number" />
+
+        <!-- Reservation Number Input Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/editext1"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Reservation No."
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textHint" />
+
+                <Button
+                    android:id="@+id/reservationno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/button"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Title Section -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/textcolor"
+            android:layout_marginBottom="8dp"
+            android:text="Cabin Number" />
+
+        <!-- Cabin Number Input Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <EditText
+                    android:id="@+id/editext2"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Cabin No."
+                    android:padding="10dp"
+                    android:background="@drawable/edittext_background"
+                    android:textColor="@color/textPrimary"
+                    android:textColorHint="@color/textHint" />
+
+                <Button
+                    android:id="@+id/cabinno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Submit"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/button"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- All Guest Details Button -->
+        <Button
+            android:id="@+id/allguestDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:text="All Guest Details"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/button"/>
+    </LinearLayout>
+</layout>

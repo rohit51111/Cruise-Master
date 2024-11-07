@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="guestdetail"
+            type="com.example.cruisemaster.againguestdetails.model.GuestDetails" />
+        <variable
+            name="viewmodel"
+            type="com.example.cruisemaster.againguestdetails.viewmodel.GuestDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:text="Guest Details"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Name:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text='@{guestdetail.firstName + " " + guestdetail.lastName}'
+                        android:id="@+id/txt1"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Person ID:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.personId}"
+                        android:id="@+id/txt2"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Onboard:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.isOnboard()}"
+                        android:id="@+id/txt3"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Checked In:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.isCheckedIn()}"
+                        android:id="@+id/txt4"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Reservation Number:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.reservationNumber}"
+                        android:id="@+id/txt5"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Embark Date:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.embarkDate}"
+                        android:id="@+id/txt6"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Debark Date:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{guestdetail.dbarkDate}"
+                        android:id="@+id/txt13"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:text="Cabin No:"
+                        android:textSize="18sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:text="@{String.valueOf(guestdetail.cabinNo)}"
+                        android:id="@+id/txt7"
+                        android:textSize="18sp"
+                        android:textColor="@color/textPrimary"
+                        android:layout_marginLeft="8dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/checkin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/button"
+                    android:textColor="@color/white"
+                    android:text='@{viewmodel.isCheckedIn ? @string/check_out : @string/check_in}'
+                    app:cornerRadius="8dp"
+                    app:iconTint="@color/white"
+                    app:iconGravity="textStart"
+                    style="?attr/materialButtonOutlinedStyle"/>
+
+
+                <Button
+                    android:id="@+id/onboard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="@color/button"
+                    android:textColor="@color/white"
+                    android:text='@{viewmodel.isOnBoard ? @string/off_board : @string/on_board}'
+                    app:cornerRadius="8dp"
+                    app:iconTint="@color/white"
+                    app:iconGravity="textStart"
+                    style="?attr/materialButtonOutlinedStyle"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
